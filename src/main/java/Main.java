@@ -1,9 +1,7 @@
 import java.util.function.IntUnaryOperator;
 
 public class Main {
-    // write the nextOddNum here
     public static NumberLambda nextOddNum = (int input) -> {
-        // If even, return the number + 1, else recursively call with the value + 1 to check the next number
         return input + input % 2 | 1;
     };
 
