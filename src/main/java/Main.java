@@ -1,13 +1,10 @@
 import java.util.function.IntUnaryOperator;
 
 public class Main {
-	// write the nextOddNum here
-    public static NumberLambda nextOddNum = new NumberLambda() {
-        @Override
-        public int applyAsInt(int input) {
-            // If even, return the number + 1, else recursively call with the value + 1 to check the next number
-            return input % 2 == 0 ? input + 1 : applyAsInt(input + 1);
-        }
+    // write the nextOddNum here
+    public static NumberLambda nextOddNum = (int input) -> {
+        // If even, return the number + 1, else recursively call with the value + 1 to check the next number
+        return input + input % 2 | 1;
     };
 
     public static void main(String[] args) {
